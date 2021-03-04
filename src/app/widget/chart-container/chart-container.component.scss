@@ -3,9 +3,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-content: center;
 }
 
 .card {
-  min-width: 23rem;
+  width: 23rem;
+}
+
+// Overwrite Bootstrap rule
+.col {
+  flex-grow: unset;
 }

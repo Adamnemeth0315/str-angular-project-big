@@ -1,138 +1,120 @@
 <div class="card-container">
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Termékek megoszlása állapot szerint</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Termékek megoszlása állapot szerint</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[0]" [pieChartData]="statisticsChartData[0]">
-          </app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[0]" [pieChartData]="statisticsChartData[0]">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Termékek megoszlása típus szerint</h4>
-          </div>
-        </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[1]" [pieChartData]="statisticsChartData[1]">
-          </app-chart-new>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Termékek megoszlása típus szerint</h4>
         </div>
       </div>
-    </div>  
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Kiemelt illetve normál termékek</h4>
-          </div>
-        </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[2]" [pieChartData]="statisticsChartData[2]">
-          </app-chart-new>
-        </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[1]" [pieChartData]="statisticsChartData[1]">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Termék ár statisztika</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Kiemelt illetve normál termékek</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[3]" [pieChartData]="statisticsChartData[3]"
-            [pieChartType]="'bar'" [chartColors]="statisticsColors"></app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[2]" [pieChartData]="statisticsChartData[2]">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Aktív és passzív vásárlók megoszlása</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Termék ár statisztika</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[4]" [pieChartData]="statisticsChartData[4]">
-          </app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[3]" [pieChartData]="statisticsChartData[3]"
+          [pieChartType]="'bar'" [chartColors]="statisticsColors"></app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Rendelések megoszlása állapot szerint</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Aktív és passzív vásárlók megoszlása</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[5]" [pieChartData]="statisticsChartData[5]">
-          </app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[4]" [pieChartData]="statisticsChartData[4]">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Rendelések mennyiségi statisztika</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Rendelések megoszlása állapot szerint</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[6]" [pieChartData]="statisticsChartData[6]"
-            [pieChartType]="'bar'" [chartColors]="statisticsColors">
-          </app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[5]" [pieChartData]="statisticsChartData[5]">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Számlák fizetési statisztika</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Rendelések mennyiségi statisztika</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[7]" [pieChartData]="statisticsChartData[7]">
-          </app-chart-new>
-        </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[6]" [pieChartData]="statisticsChartData[6]"
+          [pieChartType]="'bar'" [chartColors]="statisticsColors">
+        </app-chart-new>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card">
-        <div class="card-header card-header-text card-header-primary">
-          <div class="card-text">
-            <h4 class="card-title">Számlák összeg statisztika</h4>
-          </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Számlák fizetési statisztika</h4>
         </div>
-        <div class="card-body">
-          <app-chart-new [pieChartLabels]="statisticsChartLabels[8]" [pieChartData]="statisticsChartData[8]"
-            [pieChartType]="'bar'" [chartColors]="statisticsColors">
-          </app-chart-new>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[7]" [pieChartData]="statisticsChartData[7]">
+        </app-chart-new>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Számlák összeg statisztika</h4>
         </div>
+      </div>
+      <div class="card-body">
+        <app-chart-new [pieChartLabels]="statisticsChartLabels[8]" [pieChartData]="statisticsChartData[8]"
+          [pieChartType]="'bar'" [chartColors]="statisticsColors">
+        </app-chart-new>
       </div>
     </div>
   </div>

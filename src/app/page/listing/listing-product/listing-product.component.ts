@@ -53,17 +53,10 @@ export class ListingProductComponent implements OnInit {
   }
 
   onRemove(product: Product): void {
-    // this.productService.remove(product.id),
-    //   this.router.navigate(['/products']);
-    // if (product.id === 0) {
-    //   this.productService.create(product).subscribe(
-    //     () => {
-    //       this.toastr.success('Sikeres termék törlése!', 'Törlés!', { timeOut: 3000 });
-    //       this.router.navigate(['products']);
-    //     },
-    //     error => this.toastr.error('Hiba a termék törlésekor!', 'Hiba!', { timeOut: 3000 })
-    //   )
-    // }
+
+    if (!confirm(`Biztosan törli ezt a terméket? (id: ${product.id} Termék név: ${product.name} Ár: ${product.price})`)) {
+      return
+    }
 
     this.productService.remove(product).subscribe(
       () => {

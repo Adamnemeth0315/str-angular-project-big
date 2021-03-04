@@ -26,8 +26,21 @@ th {
   user-select: none;
 }
 
+#backup {
+  position: absolute;
+  bottom: 5rem;
+  right: 4rem;
+}
+tbody > tr > td {
 
-
+  height:20px;
+  padding:0px;
+  border-top: 0px;
+}
+.ujrendeles{
+ margin-top: 0;
+ margin-bottom: 0;
+}
 
 
 
