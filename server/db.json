@@ -71,20 +71,6 @@
       "active": false
     },
     {
-      "id": 6,
-      "firstName": "Jill",
-      "lastName": "Norton",
-      "email": "jnorton5@noaa.gov",
-      "address": {
-        "zip": 1543,
-        "country": "Hungary",
-        "city": "Budapest",
-        "street": "Arany János utca",
-        "notes": "Something note."
-      },
-      "active": false
-    },
-    {
       "id": 7,
       "firstName": "Adda",
       "lastName": "Riggert",

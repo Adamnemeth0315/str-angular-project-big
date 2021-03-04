@@ -1,24 +1,22 @@
-<div class="container">
+<div class="container top">
+  <a class="jump-top" href="products#top"><i class="fa fa-arrow-circle-up"></i></a>
   <div class="row">
-    <div class="col-4 offset-5 mb-5">
+    <div class="col-4 offset-5 mb-5 mb-3 mt-0">
       <h2>VÁSÁRLÓK</h2>
     </div>
-
     <div class="col-12 my-3 mb-3">
       <button class="btn btn-success btn-block mt-3 mb-5" style="font-size:14px" [routerLink]="[0]">
         <i class="material-icons">add</i> ÚJ VÁSÁRLÓ LÉTREHOZÁSA
       </button>
     </div>
-
-    <div class="col-3 mt-0 mb-5">
+    <div class="col-3 mt-0 mb-3">
       <select [(ngModel)]="filterKey" class="custom-select bg-light" style="font-size: 20px">
         <option *ngFor="let col of cols" [value]="col.key">
           {{ col.text }}
         </option>
       </select>
     </div>
-
-    <div class="col-4 search-bar mt-0 mb-5">
+    <div class="col-4 search-bar mt-0 mb-3">
       <form class="form-inline my-2 my-lg-0">
         <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text" placeholder="Keresés" />
         <button class="btn btn-success my-2 my-sm-0" type="submit">
@@ -26,32 +24,28 @@
         </button>
       </form>
     </div>
-
     <div class="col-5 mt-0 mb-5 d-flex justify-content-end">
       <button class="btn btn-success my-2 my-sm-0" (click)="scroll('summaries')">STATISZTIKA</button>
     </div>
   </div>
-
-
   <table class="table table-striped">
     <thead class="bg-dark text-light">
       <tr>
-        <th (click)="onColumnSelect(col.key)" *ngFor="let col of cols">
-          <span *ngIf='col.key === sortedColumn && !firstSorting'>
-            <i *ngIf="!direction" class="fa fa-sort-alpha-desc"></i>
-            <i *ngIf="direction" class="fa fa-sort-alpha-asc"></i>
-          </span>
-
-          {{ col.text }}
-        </th>
+        <th (click)="onColumnSelect(col.key)" *ngFor="let col of cols"><b>
+            <span *ngIf='col.key === sortedColumn && !firstSorting'>
+              <i *ngIf="!direction" class="fa fa-sort-alpha-desc"></i>
+              <i *ngIf="direction" class="fa fa-sort-alpha-asc"></i>
+            </span>
+            {{ col.text }}
+          </b> </th>
         <th></th>
         <th></th>
-        <th>Műveletek</th>
+        <th><b>Műveletek</b></th>
       </tr>
     </thead>
     <tbody>
-      <!-- | filter:filterKey:phrase | sorter:sortedColumn:sortedOrder -->
-      <tr *ngFor="let customer of customerList$ | async | filter:filterKey:phrase | sorter:sortedColumn:sortedOrder">
+      <tr class="tablerow" style="padding-bottom: 1px;"
+        *ngFor="let customer of customerList$ | async | filter:filterKey:phrase | sorter:sortedColumn:sortedOrder">
         <td>
           {{ customer.id }}
         </td>
@@ -86,7 +80,6 @@
       </tr>
     </tbody>
   </table>
-
   <div class="table-responsive">
     <table class="table" id="summaries">
       <thead class="bg-dark text-light">
@@ -111,16 +104,9 @@
             ͏͏͏͏͏͏͏<p> <b style="font-size: 18px">Passzív vásárló: {{ numberOfPassiveCustomers$ | async }}</b></p>
           </div>
           <th></th>
-
         </tr>
       </thead>
       <tbody>
     </table>
-    <footer>
-      <div class="d-flex justify-content-end">
-        <a href="#top" onclick="self.scrollTo(0, 0); return false;" class="material-icons icon-white" d-flex
-          justify-content-end>backup</a>
-      </div>
-    </footer>
   </div>
 </div>
